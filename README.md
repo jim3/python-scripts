@@ -1,1 +1,1 @@
-# python-scripts
+My *"learning Python exercises"* repo. 🐍
