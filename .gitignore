@@ -1,0 +1,10 @@
+# See https://help.github.com/articles/ignoring-files/#create-a-gitignore-file
+
+# notepad
+notes.md
+
+# python virtual env
+env/
+
+# python cache
+__pycache__/
