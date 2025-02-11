@@ -23,11 +23,10 @@ def parse_nmap_output(output):
         return
 
     lst = []
-    portNumRegexObj = re.compile(r"\d{2,5}/")
-
+    regexObj = re.compile(r"\d{2,5}/")
     try:
-        match = portNumRegexObj.findall(output)
-        for p in match:
+        ports = regexObj.findall(output)
+        for p in ports:
             portList = str(p).rstrip("/")
             lst.append(portList)
     except re.error as e:
