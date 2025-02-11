@@ -18,12 +18,22 @@ def nmap_scan(cidr):
 
 
 def parse_nmap_output(output):
+    if not isinstance(output, str):
+        print("Error: Output is not a string!")
+        return
+
     lst = []
     portNumRegexObj = re.compile(r"\d{2,5}/")
-    match = portNumRegexObj.findall(output)
-    for p in match:
-        portList = str(p).rstrip("/")
-        lst.append(portList)
+
+    try:
+        match = portNumRegexObj.findall(output)
+        for p in match:
+            portList = str(p).rstrip("/")
+            lst.append(portList)
+    except re.error as e:
+        print(f"Regex error: {e}")
+        return
+
     return lst
 
 
