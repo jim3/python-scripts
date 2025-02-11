@@ -18,10 +18,13 @@ def nmap_scan(cidr):
 
 
 def parse_nmap_output(output):
+    lst = []
     portNumRegexObj = re.compile(r"\d{2,5}/")
     match = portNumRegexObj.findall(output)
-    portList = [re.sub(r"/", "", m) for m in match]
-    return portList
+    for p in match:
+        portList = str(p).rstrip("/")
+        lst.append(portList)
+    return lst
 
 
 def main():
