@@ -50,7 +50,7 @@ def main():
 
     subnetMask = sys.argv[2]
     subnetMaskRegex = re.compile(r"\d{1,2}")
-    subnetMaskMatch = subnetMaskRegex.match(subnetMask)  # check if subnet mask is valid
+    subnetMaskMatch = subnetMaskRegex.match(subnetMask)
     if not subnetMaskMatch:
         print("Invalid subnet mask")
         sys.exit(1)
