@@ -1,1 +1,1 @@
-My *"learning ![golang](gopher.png) Python exercises"* repo. 🐍
+My *"learning Python exercises"* repo. 🐍
